@@ -41,7 +41,7 @@ API
 equal(actual: Iterable, expected: Iterable, message?) => void
 ```
 
-Check if `actual` deeply equals `expected`. The item can be out of order.
+Assert if `actual` deeply equals `expected`. The item can be out of order.
 
 
 Changelog
