@@ -1,0 +1,40 @@
+{
+  "name": "assert-set",
+  "version": "0.0.0",
+  "description": "Assertion with Sets",
+  "author": "eight04 <eight04@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "assert",
+    "set"
+  ],
+  "scripts": {
+    "lint": "eslint **/*.js --cache",
+    "test": "npm run lint && c8 --reporter=lcov mocha -b",
+    "preversion": "npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push --follow-tags && npm publish",
+    "build": "exit 0"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "deep-equal": "^1.1.0"
+  },
+  "devDependencies": {
+    "c8": "^5.0.4",
+    "eslint": "^6.1.0",
+    "mocha": "^6.2.0"
+  },
+  "repository": "eight04/assert-set",
+  "eslintIgnore": [
+    "coverage",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "lib",
+    "dist"
+  ]
+}
